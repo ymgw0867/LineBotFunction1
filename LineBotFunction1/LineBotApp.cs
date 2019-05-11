@@ -115,32 +115,7 @@ namespace LineBotFunction1
 
         private Task EchoAsync(string replyToken, string userMessage)
         {
-            ISendMessage replyMessage = new TextMessage("");
-
-            //return MessagingClient.ReplyMessageAsync(replyToken, userMessage);
-
-            //return MessagingClient.ReplyMessageAsync(replyToken, new[] {
-            //            new TextMessage($"‚ ‚¢‚æ‚ğ‚É‚¾‚Ë") });
-
-
-            //replyMessage = new TextMessage($"you said : {userMessage}");
-            //await context.PostAsync($"{this.count++}: ‚ ‚È‚½‚ª‘‚¢‚½ {message.Text}");
-
-            //if (userMessage == "123")
-            //{
-            //    string t = $"‚±‚ê‚Í‚±‚ê‚Í";
-            //    //replyMessage.Text = new TextMessage(t).Text;
-            //    replyMessage.Text = "‚±‚ê‚Í‚±‚ê‚Í";
-            //}
-
-            //replyMessage.Text = "‚±‚ê‚Í‚±‚ê‚Í";
-            //string str = $"‚±‚ê‚Í‚±‚ê‚Í";
-
-            //var replyMessage = new TextMessage($"You said: {userMessage}");
-
-            //replyMessage = new TextMessage($@"‚Ç‚¤‚à‚Ç‚¤‚à");
-
-            return MessagingClient.ReplyMessageAsync(replyToken, $"‚ ‚È‚½‚ª‘‚¢‚½ { userMessage }");              
+            return MessagingClient.ReplyMessageAsync(replyToken, userMessage);            
         }
 
         private async Task EchoImageAsync(string replyToken, string messageId, string blobDirectoryName)
