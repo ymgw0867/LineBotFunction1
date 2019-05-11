@@ -129,7 +129,8 @@ namespace LineBotFunction1
             if (userMessage == "123")
             {
                 string t = $"‚±‚ê‚Í‚±‚ê‚Í";
-                replyMessage.Text = new TextMessage(t).Text;
+                //replyMessage.Text = new TextMessage(t).Text;
+                replyMessage.Text = "‚±‚ê‚Í‚±‚ê‚Í";
             }
 
             //replyMessage.Text = "‚±‚ê‚Í‚±‚ê‚Í";
