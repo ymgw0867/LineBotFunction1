@@ -123,7 +123,8 @@ namespace LineBotFunction1
             //            new TextMessage($"‚ ‚¢‚æ‚ğ‚É‚¾‚Ë") });
 
 
-            replyMessage = new TextMessage($"you said : {userMessage}");
+            //replyMessage = new TextMessage($"you said : {userMessage}");
+            //await context.PostAsync($"{this.count++}: ‚ ‚È‚½‚ª‘‚¢‚½ {message.Text}");
 
             //if (userMessage == "123")
             //{
@@ -137,10 +138,9 @@ namespace LineBotFunction1
 
             //var replyMessage = new TextMessage($"You said: {userMessage}");
 
-            replyMessage = new TextMessage($@"‚Ç‚¤‚à‚Ç‚¤‚à");
+            //replyMessage = new TextMessage($@"‚Ç‚¤‚à‚Ç‚¤‚à");
 
-            return MessagingClient.ReplyMessageAsync(replyToken, new [] { replyMessage });
-              
+            return MessagingClient.ReplyMessageAsync(replyToken, $"‚ ‚È‚½‚ª‘‚¢‚½ { userMessage }");              
         }
 
         private async Task EchoImageAsync(string replyToken, string messageId, string blobDirectoryName)
