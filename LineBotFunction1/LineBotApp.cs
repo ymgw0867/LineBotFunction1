@@ -36,6 +36,7 @@ namespace LineBotFunction1
 
                     string str = $"テストだよ";
                     //await EchoAsync(ev.ReplyToken, ("おっと「").ToString() + ((TextEventMessage)ev.Message).Text + $"」ときましたか");
+
                     await EchoAsync(ev.ReplyToken, str);
                     break;
 
@@ -116,7 +117,9 @@ namespace LineBotFunction1
 
         private Task EchoAsync(string replyToken, string userMessage)
         {
-            return MessagingClient.ReplyMessageAsync(replyToken, userMessage);
+            //return MessagingClient.ReplyMessageAsync(replyToken, userMessage);
+
+            return MessagingClient.ReplyMessageAsync(replyToken, $"テストです");
         }
 
         private async Task EchoImageAsync(string replyToken, string messageId, string blobDirectoryName)
