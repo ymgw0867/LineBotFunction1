@@ -124,7 +124,7 @@ namespace LineBotFunction1
 
             var replyMessage = new TextMessage($"You said: {userMessage}");
 
-            if (userMessage == "‚±‚ñ‚É‚¿‚Í")
+            if (userMessage == "123")
             {
                 replyMessage.Text = "‚±‚ê‚Í‚±‚ê‚Í";
             }
