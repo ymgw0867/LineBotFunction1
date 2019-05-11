@@ -33,8 +33,10 @@ namespace LineBotFunction1
             switch (ev.Message.Type)
             {
                 case EventMessageType.Text:
+
+                    string str = "テストだよ";
                     //await EchoAsync(ev.ReplyToken, ("おっと「").ToString() + ((TextEventMessage)ev.Message).Text + $"」ときましたか");
-                    await EchoAsync(ev.ReplyToken, "テストだよ");
+                    await EchoAsync(ev.ReplyToken, str);
                     break;
 
                 case EventMessageType.Image:
