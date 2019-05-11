@@ -117,23 +117,25 @@ namespace LineBotFunction1
 
         private Task EchoAsync(string replyToken, string userMessage)
         {
+            ISendMessage replyMessage = null;
             //return MessagingClient.ReplyMessageAsync(replyToken, userMessage);
 
             //return MessagingClient.ReplyMessageAsync(replyToken, new[] {
             //            new TextMessage($"‚ ‚¢‚æ‚ğ‚É‚¾‚Ë") });
 
-            var replyMessage = new TextMessage($"You said: {userMessage}");
+ 
+            replyMessage = new TextMessage($"‚±‚ê‚Í: {userMessage}");
 
             if (userMessage == "123")
             {
-                replyMessage.Text = $"‚±‚ê‚Í‚±‚ê‚Í";
+                replyMessage = new TextMessage("‚±‚ê‚Í‚±‚ê‚Í");
             }
 
             //replyMessage.Text = "‚±‚ê‚Í‚±‚ê‚Í";
             //string str = $"‚±‚ê‚Í‚±‚ê‚Í";
 
             //var replyMessage = new TextMessage($"You said: {userMessage}");
-            return MessagingClient.ReplyMessageAsync(replyToken, new[] { $"u{replyMessage}v‚ÆŒ¾‚Á‚½‚© ‚É‚áH" });
+            return MessagingClient.ReplyMessageAsync(replyToken, new[] { replyMessage });
               
         }
 
