@@ -128,14 +128,15 @@ namespace LineBotFunction1
 
             if (userMessage == "123")
             {
-                replyMessage = new TextMessage("‚±‚ê‚Í‚±‚ê‚Í");
+                string t = $"‚±‚ê‚Í‚±‚ê‚Í";
+                replyMessage = new TextMessage(t);
             }
 
             //replyMessage.Text = "‚±‚ê‚Í‚±‚ê‚Í";
             //string str = $"‚±‚ê‚Í‚±‚ê‚Í";
 
             //var replyMessage = new TextMessage($"You said: {userMessage}");
-            return MessagingClient.ReplyMessageAsync(replyToken, new[] { replyMessage });
+            return MessagingClient.ReplyMessageAsync(replyToken, new [] { replyMessage });
               
         }
 
