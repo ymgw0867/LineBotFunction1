@@ -119,7 +119,7 @@ namespace LineBotFunction1
         {
             //return MessagingClient.ReplyMessageAsync(replyToken, userMessage);
 
-            return MessagingClient.ReplyMessageAsync(replyToken, $"ƒeƒXƒg‚Å‚·");
+            return MessagingClient.ReplyMessageAsync(replyToken, $"it's a Test");
         }
 
         private async Task EchoImageAsync(string replyToken, string messageId, string blobDirectoryName)
