@@ -35,9 +35,9 @@ namespace LineBotFunction1
                 case EventMessageType.Text:
 
                     string str = $"テストだよ";
-                    //await EchoAsync(ev.ReplyToken, ("おっと「").ToString() + ((TextEventMessage)ev.Message).Text + $"」ときましたか");
+                    await EchoAsync(ev.ReplyToken, ((TextEventMessage)ev.Message).Text);
 
-                    await EchoAsync(ev.ReplyToken, str);
+                    //await EchoAsync(ev.ReplyToken, str);
                     break;
 
                 case EventMessageType.Image:
@@ -119,8 +119,19 @@ namespace LineBotFunction1
         {
             //return MessagingClient.ReplyMessageAsync(replyToken, userMessage);
 
-            return MessagingClient.ReplyMessageAsync(replyToken, new[] {
-                        new TextMessage($"あいよをにだね") });
+            //return MessagingClient.ReplyMessageAsync(replyToken, new[] {
+            //            new TextMessage($"あいよをにだね") });
+
+
+
+            var replyMessage = new TextMessage($"You said: {userMessage}");
+            if (userMessage == "こんにちは")
+            {
+                replyMessage.Text = "これはこれは";
+            }
+
+            return MessagingClient.ReplyMessageAsync(replyToken, new [] { replyMessage });
+              
         }
 
         private async Task EchoImageAsync(string replyToken, string messageId, string blobDirectoryName)
