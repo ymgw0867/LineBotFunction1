@@ -36,8 +36,6 @@ namespace LineBotFunction1
 
                     //string str = $"ƒeƒXƒg‚¾‚æ";
                     await EchoAsync(ev.ReplyToken, ((TextEventMessage)ev.Message).Text);
-
-                    //await EchoAsync(ev.ReplyToken, str);
                     break;
 
                 case EventMessageType.Image:
@@ -125,7 +123,7 @@ namespace LineBotFunction1
             //            new TextMessage($"‚ ‚¢‚æ‚ð‚É‚¾‚Ë") });
 
 
-            //var replyMessage = new TextMessage($"‚±‚ê‚Í: {userMessage}");
+            replyMessage = new TextMessage($"you said : {userMessage}");
 
             //if (userMessage == "123")
             //{
@@ -139,7 +137,7 @@ namespace LineBotFunction1
 
             //var replyMessage = new TextMessage($"You said: {userMessage}");
 
-            replyMessage = new TextMessage("‚Ç‚¤‚à‚Ç‚¤‚à");
+            replyMessage = new TextMessage($@"‚Ç‚¤‚à‚Ç‚¤‚à");
 
             return MessagingClient.ReplyMessageAsync(replyToken, new [] { replyMessage });
               
