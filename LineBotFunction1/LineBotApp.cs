@@ -133,7 +133,7 @@ namespace LineBotFunction1
             //string str = $"‚±‚ê‚Í‚±‚ê‚Í";
 
             //var replyMessage = new TextMessage($"You said: {userMessage}");
-            return MessagingClient.ReplyMessageAsync(replyToken, new [] { replyMessage });
+            return MessagingClient.ReplyMessageAsync(replyToken, new[] { $"u{replyMessage}v‚ÆŒ¾‚Á‚½‚© ‚É‚áH" });
               
         }
 
