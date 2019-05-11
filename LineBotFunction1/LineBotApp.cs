@@ -33,7 +33,7 @@ namespace LineBotFunction1
             switch (ev.Message.Type)
             {
                 case EventMessageType.Text:
-                    await EchoAsync(ev.ReplyToken, ((TextEventMessage)ev.Message).Text);
+                    await EchoAsync(ev.ReplyToken, "Åu" + ((TextEventMessage)ev.Message).Text + "ÅvÇ≈Ç∑ÇÀÅI");
                     break;
 
                 case EventMessageType.Image:

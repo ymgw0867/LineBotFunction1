@@ -21,7 +21,7 @@ namespace LineBotFunction1
             sp.ConnectionLeaseTimeout = 60 * 1000;
         }
 
-        [FunctionName("LineMessagingApiSample")]
+        [FunctionName("LineBotFunction1")]
         public static async Task<HttpResponseMessage> Run([HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = null)]HttpRequestMessage req, TraceWriter log)
         {
             try
@@ -39,7 +39,6 @@ namespace LineBotFunction1
                 //*/
 
                 await app.RunAsync(events);
-
             }
             catch (InvalidSignatureException e)
             {
