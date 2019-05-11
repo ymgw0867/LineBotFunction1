@@ -36,7 +36,7 @@ namespace LineBotFunction1
 
                     string str = "テストだよ";
                     //await EchoAsync(ev.ReplyToken, ("おっと「").ToString() + ((TextEventMessage)ev.Message).Text + $"」ときましたか");
-                    await EchoAsync(ev.ReplyToken, str);
+                    await EchoAsync(ev.ReplyToken, ev.Message.ToString());
                     break;
 
                 case EventMessageType.Image:
