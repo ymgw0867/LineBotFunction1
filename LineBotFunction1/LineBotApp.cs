@@ -34,7 +34,7 @@ namespace LineBotFunction1
             {
                 case EventMessageType.Text:
 
-                    string str = $"テストだよ";
+                    //string str = $"テストだよ";
                     await EchoAsync(ev.ReplyToken, ((TextEventMessage)ev.Message).Text);
 
                     //await EchoAsync(ev.ReplyToken, str);
@@ -122,14 +122,14 @@ namespace LineBotFunction1
             //return MessagingClient.ReplyMessageAsync(replyToken, new[] {
             //            new TextMessage($"あいよをにだね") });
 
-
-
             var replyMessage = new TextMessage($"You said: {userMessage}");
+
             if (userMessage == "こんにちは")
             {
                 replyMessage.Text = "これはこれは";
             }
 
+            replyMessage.Text = "これはこれは";
             return MessagingClient.ReplyMessageAsync(replyToken, new [] { replyMessage });
               
         }
