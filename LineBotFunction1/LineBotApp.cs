@@ -122,14 +122,14 @@ namespace LineBotFunction1
             //return MessagingClient.ReplyMessageAsync(replyToken, new[] {
             //            new TextMessage($"‚ ‚¢‚æ‚ð‚É‚¾‚Ë") });
 
-            var replyMessage = new TextMessage($"You said: {userMessage}");
+            //var replyMessage = new TextMessage($"You said: {userMessage}");
 
-            if (userMessage == "‚±‚ñ‚É‚¿‚Í")
-            {
-                replyMessage.Text = "‚±‚ê‚Í‚±‚ê‚Í";
-            }
+            //if (userMessage == "‚±‚ñ‚É‚¿‚Í")
+            //{
+            //    replyMessage.Text = "‚±‚ê‚Í‚±‚ê‚Í";
+            //}
 
-            replyMessage.Text = "‚±‚ê‚Í‚±‚ê‚Í";
+            var replyMessage = new TextMessage($"‚±‚ê‚Í‚±‚ê‚Í");
             return MessagingClient.ReplyMessageAsync(replyToken, new [] { replyMessage });
               
         }
