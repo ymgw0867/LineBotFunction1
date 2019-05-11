@@ -129,7 +129,8 @@ namespace LineBotFunction1
             //    replyMessage.Text = "‚±‚ê‚Í‚±‚ê‚Í";
             //}
 
-            var replyMessage = new TextMessage($"‚±‚ê‚Í‚±‚ê‚Í");
+            string str = "‚±‚ê‚Í‚±‚ê‚Í";
+            var replyMessage = new TextMessage($"{str}");
             return MessagingClient.ReplyMessageAsync(replyToken, new [] { replyMessage });
               
         }
